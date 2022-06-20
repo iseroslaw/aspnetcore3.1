@@ -7,4 +7,17 @@
 <div class="text-center">
     <h1 class="display-4">Welcome to Pippo</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   
+    <form>
+        <p>
+            Title: <input type="text" asp-for="SearchString" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
+    @if (ViewData["Message"] != null)
+    {
+        <p>Function responded with 
+            <h3 class="display-4">@ViewData["Message"]</h3>
+        </p>
+    }
 </div>
